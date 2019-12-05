@@ -79,11 +79,11 @@ prob_change = [[1.5, 0.5],
 #main loop
 while True:
     # do hiragana
-    column = japanese_columns[0]
+    # column = japanese_columns[0]
     # do katakana
     # column = japanese_columns[1]
     # do both randomly
-    # column = japanese_columns[int(np.random.random()*2)]
+    column = japanese_columns[int(np.random.random()*2)]
 
     index = random_index(column)
     random_choice = (np.random.random() <= df[probability_columns[column]][index])
