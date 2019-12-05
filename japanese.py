@@ -42,9 +42,10 @@ def ask_MCQ(index, column):
             print("Correct!")
             return True
         else:
-            print("Oops! The answer is {}".format(pinyin))
+            print("Oops! The answer is {}".format(english))
             return False
     except Exception as e:
+        print(e)
         print("Kya input karrela bhailog... -_-")
 
 def ask_blank(index, column):
@@ -52,7 +53,7 @@ def ask_blank(index, column):
     english = df['english'][index]
 
     #ask the question
-    print("What is the pronounciation of {}?".format(english))
+    print("What is the pronounciation of {}?".format(character))
     print("Show answer? (Y)")
     input()
     print("Answer is: {}".format(english))
