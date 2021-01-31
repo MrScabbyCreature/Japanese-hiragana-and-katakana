@@ -39,10 +39,10 @@ def ask_MCQ(index, column):
     answer = input()
     try:
         if choices[int(answer)] == english:
-            print("Correct!")
+            print(f"Correct: {column}!")
             return True
         else:
-            print("Oops! The answer is {}".format(english))
+            print(f"Oops! The answer is {column}: {english}")
             return False
     except Exception as e:
         print(e)
@@ -56,7 +56,7 @@ def ask_blank(index, column):
     print("What is the pronounciation of {}?".format(character))
     print("Show answer? (Y)")
     input()
-    print("Answer is: {}".format(english))
+    print(f"Answer is: {column}: {english}")
     print("Did you get it right?")
     choices = ['Yes!', 'No :(']
     for i in range(2):
