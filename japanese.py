@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from random import shuffle
+from random import random, shuffle
 from IPython.display import display as display_dataframe
 
 df = pd.read_csv("hira-kata.csv", index_col='idx')
@@ -86,7 +86,7 @@ while True:
     column = japanese_columns[int(np.random.random()*2)]
 
     index = random_index(column)
-    random_choice = (np.random.random() <= df[probability_columns[column]][index])
+    random_choice = int(np.random.random() <= df[probability_columns[column]][index])
     result = function[random_choice](index, column)
     if result is not None:
         df.loc[index, probability_columns[column]] *= prob_change[random_choice][result]
