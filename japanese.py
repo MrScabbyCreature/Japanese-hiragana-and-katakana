@@ -3,7 +3,7 @@ import numpy as np
 from random import shuffle
 from IPython.display import display as display_dataframe
 
-df = pd.read_excel("hira-kata.xlsx", index_col='idx')
+df = pd.read_csv("hira-kata.csv", index_col='idx')
 japanese_columns = ['hiragana', 'katakana']
 probability_columns = {'hiragana': 'hira_prob', 'katakana': 'kata_prob'}
 if 'hira_prob' not in df.columns or 'kata_prob' not in df.columns:
