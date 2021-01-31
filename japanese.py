@@ -91,5 +91,5 @@ while True:
     if result is not None:
         df.loc[index, probability_columns[column]] *= prob_change[random_choice][result]
     print("\n\n")
-    df.to_excel("hira-kata.xlsx")
+    df.to_csv("hira-kata.csv")
     # display_dataframe(df)
